@@ -10,9 +10,13 @@ export default function Home() {
       <section style={{ marginTop: 24 }}>
         <h2 style={{ fontSize: 22 }}>About</h2>
         <p style={{ maxWidth: 700, lineHeight: 1.6 }}>
-          I’m building hands-on skills in IT support, networking, and cloud
-          platforms. I enjoy troubleshooting, documenting fixes, and using AI
-          to improve workflows.
+          
+          I’m an entry-level IT support professional based in Sydney, building
+          hands-on experience with cloud platforms, networking, and technical
+          support systems. I enjoy solving real-world problems, documenting
+          solutions clearly, and using modern tools, including AI, to work
+          efficiently and accurately.
+          
         </p>
       </section>
 
