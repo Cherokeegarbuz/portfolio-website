@@ -90,10 +90,14 @@ export default function Home() {
             desc="Hands-on network troubleshooting lab covering Wi-Fi issues, 
                   DNS resolution, VPN connectivity, and basic VLAN concepts, with step-by-step documentation."
             link="#"
-          />
           <ProjectCard
             title="AI Study Assistant"
-            desc= AI-powered study assistant for summarising tickets...
+            desc="AI-powered study assistant for summarising tickets and support procedures"
+            link="#"
+          />
+        
+          
+           
             
             link="#"
           />
