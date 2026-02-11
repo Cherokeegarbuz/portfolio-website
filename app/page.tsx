@@ -91,15 +91,31 @@ export default function Home() {
 />
 
 <ProjectCard
-  title="Network Lab (in progress)"
-  desc="Hands-on networking practice: DNS troubleshooting, VPN connectivity, and basic VLAN concepts, documented step-by-step."
+  title="Cloud Portfolio Website"
+  desc="Personal portfolio built with Next.js and deployed on Vercel. Includes resume downloads, project showcases, and GitHub integration."
+  link="#"
+/>
+
+<ProjectCard
+  title="Network Lab"
+  desc="Hands-on network troubleshooting practice including DNS resolution, VPN connectivity issues, and basic VLAN concepts with step-by-step documentation."
   link="#"
 />
 
 <ProjectCard
   title="AI Study Assistant"
-  desc="Using AI tools to learn faster and document IT support workflows (ticket summaries, checklists, and procedures)."
+  desc="AI-powered study assistant for summarising support tickets, creating troubleshooting guides, and improving learning efficiency."
   link="#"
+/>
+
+  
+  
+
+
+
+  
+  
+  
 />
           
           
