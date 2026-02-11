@@ -81,17 +81,20 @@ export default function Home() {
         <div style={{ display: "grid", gap: 12, marginTop: 12 }}>
           <ProjectCard
             title="Cloud Portfolio Website"
-            desc="Built with Next.js and deployed on Vercel with GitHub-based workflow."
+            desc="Personal portfolio built with Next.js and deployed on Vercel using GitHub CI/CD. 
+                  Includes resume downloads, contact links, and project showcases."
             link="#"
           />
           <ProjectCard
-            title="Network Lab (in progress)"
-            desc="Practicing troubleshooting workflows, basic network concepts, and support-style documentation."
+            title="Network Lab"
+            desc="Hands-on network troubleshooting lab covering Wi-Fi issues, 
+                  DNS resolution, VPN connectivity, and basic VLAN concepts, with step-by-step documentation."
             link="#"
           />
           <ProjectCard
             title="AI Study Assistant"
-            desc="Using AI tools to learn faster and document support procedures."
+            desc= AI-powered study assistant for summarising tickets...
+            
             link="#"
           />
         </div>
