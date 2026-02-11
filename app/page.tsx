@@ -106,6 +106,12 @@ export default function Home() {
           LinkedIn: <a href={linkedin} target="_blank" rel="noreferrer" style={linkStyle()}>
             au.linkedin.com/in/sergii-garbuz
           </a>
+          <a href="/resume.pdf" target="_blank" rel="noreferrer" style={buttonStyle("outline")}>
+            Resume (PDF)
+         </a>
+         <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" style={buttonStyle("outline")}>
+         Cover Letter (PDF)
+       </a>
         </p>
       </section>
 
