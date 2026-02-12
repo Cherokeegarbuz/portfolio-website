@@ -1,182 +1,262 @@
 export default function Home() {
-  const email = "cherokeegarbuz@gmail.com";
-  const linkedin = "https://au.linkedin.com/in/sergii-garbuz";
-  const githubRepo = "https://github.com/Cherokeegarbuz/portfolio-website";
+  const container: React.CSSProperties = {
+    minHeight: "100vh",
+    background: "#0b0b0c",
+    color: "#f5f5f7",
+    padding: "56px 18px",
+    fontFamily:
+      'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"',
+  };
+
+  const maxWidth: React.CSSProperties = {
+    maxWidth: 820,
+    margin: "0 auto",
+  };
+
+  const h1: React.CSSProperties = {
+    fontSize: 44,
+    lineHeight: 1.05,
+    letterSpacing: -0.6,
+    margin: 0,
+    fontWeight: 700,
+  };
+
+  const subtitle: React.CSSProperties = {
+    marginTop: 10,
+    fontSize: 18,
+    opacity: 0.78,
+  };
+
+  const pillRow: React.CSSProperties = {
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    marginTop: 18,
+  };
+
+  const pillLink = (variant: "primary" | "ghost" = "ghost"): React.CSSProperties => ({
+    display: "inline-block",
+    padding: "10px 14px",
+    borderRadius: 14,
+    textDecoration: "none",
+    border: variant === "primary" ? "1px solid #f5f5f7" : "1px solid rgba(255,255,255,0.14)",
+    background: variant === "primary" ? "#f5f5f7" : "transparent",
+    color: variant === "primary" ? "#0b0b0c" : "#f5f5f7",
+    fontSize: 15,
+    fontWeight: 600,
+  });
+
+  const sectionTitle: React.CSSProperties = {
+    marginTop: 36,
+    marginBottom: 12,
+    fontSize: 34,
+    letterSpacing: -0.4,
+    fontWeight: 700,
+  };
+
+  const paragraph: React.CSSProperties = {
+    fontSize: 16,
+    lineHeight: 1.7,
+    opacity: 0.9,
+    margin: "0 0 10px 0",
+  };
+
+  const grid: React.CSSProperties = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+    gap: 14,
+    marginTop: 14,
+  };
+
+  const card: React.CSSProperties = {
+    border: "1px solid rgba(255,255,255,0.12)",
+    background: "rgba(255,255,255,0.03)",
+    borderRadius: 18,
+    padding: 16,
+  };
+
+  const cardTitle: React.CSSProperties = {
+    fontSize: 18,
+    fontWeight: 700,
+    margin: "0 0 8px 0",
+  };
+
+  const cardText: React.CSSProperties = {
+    fontSize: 15,
+    lineHeight: 1.6,
+    opacity: 0.86,
+    margin: 0,
+  };
+
+  const openLink: React.CSSProperties = {
+    display: "inline-block",
+    marginTop: 12,
+    textDecoration: "none",
+    color: "#f5f5f7",
+    opacity: 0.9,
+    fontWeight: 600,
+  };
+
+  const list: React.CSSProperties = {
+    marginTop: 8,
+    paddingLeft: 18,
+    lineHeight: 1.8,
+    opacity: 0.9,
+  };
+
+  const contactRow: React.CSSProperties = {
+    display: "flex",
+    gap: 10,
+    flexWrap: "wrap",
+    marginTop: 10,
+  };
+
+  const hr: React.CSSProperties = {
+    marginTop: 28,
+    border: "none",
+    borderTop: "1px solid rgba(255,255,255,0.10)",
+  };
 
   return (
-    <main style={styles.main}>
-      <header style={styles.header}>
-        <h1 style={styles.h1}>Sergey Garbuz</h1>
-        <p style={styles.subhead}>Entry-level IT Support • Sydney, NSW • Cloud & AI learner</p>
+    <main style={container}>
+      <div style={maxWidth}>
+        <header>
+          <h1 style={h1}>Sergey Garbuz</h1>
+          <div style={subtitle}>
+            Entry-level IT Support • Sydney, NSW • Cloud & Cybersecurity learner
+          </div>
 
-        <div style={styles.buttonRow}>
-          <a href={`mailto:${email}`} style={styles.buttonSolid}>
-            Email
-          </a>
-          <a href={linkedin} target="_blank" rel="noreferrer" style={styles.buttonOutline}>
-            LinkedIn
-          </a>
-          <a href={githubRepo} target="_blank" rel="noreferrer" style={styles.buttonOutline}>
-            GitHub Repo
-          </a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" style={styles.buttonOutline}>
-            Resume (PDF)
-          </a>
-          <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" style={styles.buttonOutline}>
-            Cover Letter (PDF)
-          </a>
-        </div>
-      </header>
+          <div style={pillRow}>
+            <a style={pillLink("primary")} href="mailto:cherokeegarbuz@gmail.com">
+              Email
+            </a>
 
-      <section style={styles.section}>
-        <h2 style={styles.h2}>About</h2>
-        <p style={styles.p}>
-          I’m building hands-on skills in IT support, networking, and cloud platforms. I enjoy troubleshooting real-world
-          issues, documenting fixes clearly, and using modern tools (including AI) to work efficiently.
-        </p>
-      </section>
+            <a
+              style={pillLink()}
+              href="https://au.linkedin.com/in/sergii-garbuz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
 
-      <section style={styles.section}>
-        <h2 style={styles.h2}>What I can help with</h2>
-        <ul style={styles.ul}>
-          <li>First-level support: hardware/software, user access, and common Windows/macOS issues</li>
-          <li>Networking basics: Wi-Fi troubleshooting, DNS issues, VPN connected but no internal access cases</li>
-          <li>Account and access: password resets, MFA basics, device sign-in checks</li>
-          <li>Documentation: clear notes, step-by-step fixes, and clean handovers/escalations</li>
-        </ul>
-      </section>
+            <a
+              style={pillLink()}
+              href="https://github.com/Cherokeegarbuz/portfolio-website"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub Repo
+            </a>
+          </div>
+        </header>
 
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Skills</h2>
-        <div style={styles.pills}>
-          {[
-            "IT Support & Troubleshooting",
-            "Windows & macOS",
-            "Networking Fundamentals",
-            "DNS / VPN Basics",
-            "Cloud (GitHub, Codespaces, Vercel)",
-            "Security Awareness",
-            "Documentation",
-            "AI Productivity Tools",
-          ].map((s) => (
-            <span key={s} style={styles.pill}>
-              {s}
-            </span>
-          ))}
-        </div>
-      </section>
+        <section>
+          <h2 style={sectionTitle}>About</h2>
+          <p style={paragraph}>
+            I’m an entry-level IT Support professional based in Sydney, with a strong foundation
+            in networking and cybersecurity. I’ve completed structured training across Network+,
+            Security+, incident handling, SOC fundamentals (including MITRE ATT&amp;CK), and
+            penetration testing.
+          </p>
+          <p style={paragraph}>
+            I enjoy troubleshooting real-world issues, supporting users clearly and calmly, and
+            documenting fixes so problems don’t repeat. My goal is to grow into a well-rounded IT
+            and security professional delivering reliable, secure, user-focused support.
+          </p>
+        </section>
 
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Projects</h2>
-        <div style={styles.cards}>
-          <ProjectCard
-            title="Cloud Portfolio Website"
-            desc="Personal portfolio built with Next.js and deployed on Vercel. Includes contact links and downloadable Resume and Cover Letter PDFs."
-            link={githubRepo}
-          />
-          <ProjectCard
-            title="Network Lab (in progress)"
-            desc="Hands-on networking practice: DNS troubleshooting, VPN connectivity, and basic VLAN concepts, documented step-by-step."
-            link={githubRepo}
-          />
-          <ProjectCard
-            title="AI Study Assistant"
-            desc="Using AI tools to learn faster and improve IT support workflows such as ticket summaries, checklists, and procedures."
-            link={linkedin}
-          />
-        </div>
-      </section>
+        <section>
+          <h2 style={sectionTitle}>Skills</h2>
+          <ul style={list}>
+            <li>First-level IT support: hardware/software, user access, Windows/macOS basics</li>
+            <li>Networking fundamentals: Wi-Fi troubleshooting, DNS, VPN connectivity</li>
+            <li>Account &amp; access: password resets, MFA basics, onboarding/offboarding support</li>
+            <li>Security fundamentals: incident awareness, safe handling, escalation &amp; documentation</li>
+            <li>Cloud workflow: GitHub, Codespaces, Vercel deployments</li>
+          </ul>
+        </section>
 
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Contact</h2>
-        <p style={styles.p}>
-          Email:{" "}
-          <a href={`mailto:${email}`} style={styles.link}>
-            {email}
-          </a>
-        </p>
-        <p style={styles.p}>
-          LinkedIn:{" "}
-          <a href={linkedin} target="_blank" rel="noreferrer" style={styles.link}>
-            au.linkedin.com/in/sergii-garbuz
-          </a>
-        </p>
-      </section>
+        <section>
+          <h2 style={sectionTitle}>Projects</h2>
 
-      <footer style={styles.footer}>
-        <p style={{ margin: 0 }}>Built with Next.js • Deployed on Vercel</p>
-      </footer>
+          <div style={grid}>
+            <div style={card}>
+              <div style={cardTitle}>Cloud Portfolio Website</div>
+              <p style={cardText}>
+                Personal portfolio built with Next.js and deployed on Vercel. Includes contact links,
+                and downloadable Resume &amp; Cover Letter PDFs. Demonstrates GitHub workflow and cloud hosting.
+              </p>
+              <a
+                style={openLink}
+                href="https://portfolio-website-seven-nu-13.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open →
+              </a>
+            </div>
+
+            <div style={card}>
+              <div style={cardTitle}>Network Lab (in progress)</div>
+              <p style={cardText}>
+                Hands-on networking and security practice environment. Includes DNS troubleshooting,
+                VPN connectivity testing, VLAN concepts, and structured documentation aligned with
+                Network+ and Security+ studies.
+              </p>
+              <a style={openLink} href="#" onClick={(e) => e.preventDefault()}>
+                Open →
+              </a>
+            </div>
+
+            <div style={card}>
+              <div style={cardTitle}>AI Study Assistant</div>
+              <p style={cardText}>
+                AI-powered study and productivity helper used to summarise tickets, generate troubleshooting
+                checklists, and support learning for IT support and cybersecurity workflows.
+              </p>
+              <a style={openLink} href="#" onClick={(e) => e.preventDefault()}>
+                Open →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 style={sectionTitle}>Contact</h2>
+          <p style={paragraph}>
+            Email:{" "}
+            <a style={{ color: "#f5f5f7" }} href="mailto:cherokeegarbuz@gmail.com">
+              cherokeegarbuz@gmail.com
+            </a>
+          </p>
+          <p style={paragraph}>
+            LinkedIn:{" "}
+            <a
+              style={{ color: "#f5f5f7" }}
+              href="https://au.linkedin.com/in/sergii-garbuz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              au.linkedin.com/in/sergii-garbuz
+            </a>
+          </p>
+
+          <div style={contactRow}>
+            <a style={pillLink()} href="/resume.pdf" target="_blank" rel="noreferrer">
+              Resume (PDF)
+            </a>
+            <a style={pillLink()} href="/cover-letter.pdf" target="_blank" rel="noreferrer">
+              Cover Letter (PDF)
+            </a>
+          </div>
+        </section>
+
+        <hr style={hr} />
+        <footer style={{ marginTop: 16, opacity: 0.65, fontSize: 13 }}>
+          Built with Next.js • Deployed on Vercel • GitHub-based workflow
+        </footer>
+      </div>
     </main>
   );
 }
-
-function ProjectCard({ title, desc, link }: { title: string; desc: string; link: string }) {
-  return (
-    <a href={link} target="_blank" rel="noreferrer" style={styles.card}>
-      <div style={styles.cardTitle}>{title}</div>
-      <div style={styles.cardDesc}>{desc}</div>
-      <div style={styles.cardMore}>Open →</div>
-    </a>
-  );
-}
-
-const styles: Record<string, React.CSSProperties> = {
-  main: { maxWidth: 760, margin: "0 auto", padding: "48px 20px", lineHeight: 1.6 },
-  header: { marginBottom: 28 },
-  h1: { fontSize: 44, margin: 0 },
-  subhead: { marginTop: 10, opacity: 0.85, fontSize: 18 },
-
-  section: { marginTop: 28 },
-  h2: { margin: 0, fontSize: 24 },
-  p: { marginTop: 10, opacity: 0.9 },
-
-  ul: { opacity: 0.9, paddingLeft: 18, marginTop: 10 },
-
-  buttonRow: { display: "flex", gap: 12, flexWrap: "wrap", marginTop: 18 },
-  buttonSolid: {
-    padding: "10px 14px",
-    borderRadius: 12,
-    fontSize: 14,
-    textDecoration: "none",
-    display: "inline-block",
-    background: "white",
-    color: "black",
-    border: "1px solid white",
-  },
-  buttonOutline: {
-    padding: "10px 14px",
-    borderRadius: 12,
-    fontSize: 14,
-    textDecoration: "none",
-    display: "inline-block",
-    background: "transparent",
-    color: "inherit",
-    border: "1px solid rgba(255,255,255,0.25)",
-  },
-
-  pills: { display: "flex", flexWrap: "wrap", gap: 10, marginTop: 10 },
-  pill: {
-    border: "1px solid rgba(255,255,255,0.14)",
-    borderRadius: 999,
-    padding: "6px 10px",
-    fontSize: 14,
-    opacity: 0.9,
-  },
-
-  cards: { display: "grid", gap: 12, marginTop: 12 },
-  card: {
-    textDecoration: "none",
-    color: "inherit",
-    border: "1px solid rgba(255,255,255,0.14)",
-    borderRadius: 14,
-    padding: 16,
-    display: "block",
-  },
-  cardTitle: { fontSize: 18, fontWeight: 700, marginBottom: 6 },
-  cardDesc: { opacity: 0.85 },
-  cardMore: { marginTop: 10, opacity: 0.75 },
-
-  link: { color: "inherit", textDecoration: "underline" },
-
-  footer: { marginTop: 42, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,0.12)", opacity: 0.7 },
-};
