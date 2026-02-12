@@ -1,3 +1,4 @@
+"use client"
 export default function Home() {
   const container: React.CSSProperties = {
     minHeight: "100vh",
