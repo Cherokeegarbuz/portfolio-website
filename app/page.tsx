@@ -1,45 +1,46 @@
 export default function Home() {
   const projects = [
     {
+      title: "SOC Analyst Training Lab",
+      status: "Active",
+      summary:
+        "Simulated real-world security incidents including credential theft, Pass-the-Hash, DNS tunneling, phishing, and persistence. Focused on detection, containment, and root cause analysis.",
+      highlights: ["SIEM Thinking", "Incident Response", "Threat Hunting"],
+    },
+    {
+      title: "Active Directory & Network Lab",
+      status: "In progress",
+      summary:
+        "Building a home lab with Windows Server and clients to practise AD basics, authentication flows, DNS, VPN, and troubleshooting real-world scenarios.",
+      highlights: ["Active Directory", "DNS", "VPN", "Troubleshooting"],
+    },
+    {
       title: "Cloud Portfolio Website",
       status: "Live",
       summary:
-        "Personal portfolio built with Next.js and deployed on Vercel. Includes resume, cover letter, and contact links.",
-      highlights: ["Next.js", "Vercel", "Responsive UI"],
-    },
-    {
-      title: "Network Lab",
-      status: "In progress",
-      summary:
-        "Hands-on networking practice: DNS troubleshooting, VPN connectivity, VLAN basics, and documentation.",
-      highlights: ["DNS", "VPN", "VLAN", "Troubleshooting"],
-    },
-    {
-      title: "AI Study Assistant",
-      status: "Active",
-      summary:
-        "Using AI tools to improve IT support workflows: ticket summaries, checklists, and troubleshooting guides.",
-      highlights: ["ITSM", "Prompting", "Runbooks"],
+        "Personal website built with Next.js and deployed on Vercel. Showcases projects, labs, and downloadable resume.",
+      highlights: ["Next.js", "Vercel", "Frontend"],
     },
   ];
 
   const skills = [
-    "Windows & basic AD concepts",
-    "Networking fundamentals (DNS, DHCP, VLANs)",
-    "VPN troubleshooting",
-    "Ticket hygiene & documentation",
-    "Basic Linux + CLI confidence",
-    "Security mindset (least privilege, logs, hygiene)",
+    "Windows & Active Directory fundamentals",
+    "Authentication basics (NTLM vs Kerberos)",
+    "Networking (DNS, DHCP, VLANs, VPN)",
+    "Incident triage & escalation thinking",
+    "Log analysis mindset (SIEM concepts)",
+    "Linux & CLI basics",
+    "Clear documentation & ticket workflows",
   ];
 
   return (
     <div className="page">
       <header className="header">
         <div className="container">
-          <p className="kicker">IT Support • Cloud • Cybersecurity</p>
+          <p className="kicker">SOC Analyst • IT Support • Cybersecurity</p>
           <h1 className="title">Sergey Garbuz</h1>
           <p className="subtitle">
-            Junior SOC / Help Desk — Sydney, AU. Building practical labs and clean documentation.
+            Junior SOC / Help Desk — Sydney, AU. Building hands-on labs and practising real-world security scenarios.
           </p>
 
           <div className="ctaRow">
@@ -53,8 +54,8 @@ export default function Home() {
         <section className="card" aria-label="About">
           <h2 className="sectionTitle">About</h2>
           <p className="text">
-            I’m focused on entry-level IT support and junior SOC pathways. I’m building a hands-on lab
-            environment and turning real troubleshooting into clear, repeatable runbooks.
+            I’m working towards a Junior SOC Analyst / IT Support role, focusing on practical labs and real-world troubleshooting.
+            I simulate security incidents, analyse behaviour (not just alerts), and document findings in a structured, repeatable way.
           </p>
         </section>
 
@@ -71,17 +72,17 @@ export default function Home() {
           <section className="card" aria-label="What I'm working on">
             <h2 className="sectionTitle">Current Focus</h2>
             <ul className="list">
-              <li>Build a small home lab: VLANs, DNS, VPN, and monitoring</li>
-              <li>Write short troubleshooting guides (1–2 pages each)</li>
-              <li>Improve ticket-style communication (issue → cause → fix → prevention)</li>
+              <li>Simulating SOC scenarios (credential theft, lateral movement, exfiltration)</li>
+              <li>Building AD + Windows lab environment</li>
+              <li>Writing structured incident reports (detection → investigation → containment)</li>
             </ul>
           </section>
         </section>
 
         <section id="projects" className="card" aria-label="Projects">
           <div className="sectionHeader">
-            <h2 className="sectionTitle">Projects</h2>
-            <p className="muted">Cards are informational only (not clickable).</p>
+            <h2 className="sectionTitle">Projects & Labs</h2>
+            <p className="muted">Focused on practical, real-world scenarios.</p>
           </div>
 
           <div className="projects">
