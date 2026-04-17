@@ -1,6 +1,24 @@
 export default function Home() {
   const projects = [
     {
+      title: "SOC Lab: Multi-Stage PowerShell Attack Detection & Response",
+      status: "Featured",
+      summary:
+        "Built a hands-on Windows SOC lab to simulate and investigate a multi-stage attack involving encoded PowerShell, suspicious process chains, reconnaissance activity, and registry-based persistence.",
+      highlights: [
+        "Event ID 4688",
+        "PowerShell Logging",
+        "Incident Response",
+        "MITRE ATT&CK",
+      ],
+      details: [
+        "Detected obfuscated PowerShell execution using -enc, -nop, -w hidden, and execution policy bypass flags",
+        "Investigated parent-child process chains including PowerShell spawning cmd.exe and reg.exe",
+        "Analysed reconnaissance behaviour such as whoami, ipconfig, and net user",
+        "Identified persistence via HKCU Run key modification and documented containment actions",
+      ],
+    },
+    {
       title: "SOC Analyst Training Lab",
       status: "Active",
       summary:
@@ -10,13 +28,23 @@ export default function Home() {
         "Incident Response",
         "SIEM Mindset",
       ],
+      details: [
+        "Practised multi-stage detection and triage thinking",
+        "Focused on scoping, escalation, and host containment decisions",
+        "Mapped suspicious behaviour to attacker objectives and likely next steps",
+      ],
     },
     {
       title: "Active Directory & Network Lab",
-      status: "In progress",
+      status: "In Progress",
       summary:
         "Building a Windows lab environment to practise Active Directory fundamentals, authentication flows, DNS, VPN troubleshooting, and structured support workflows.",
       highlights: ["Active Directory", "DNS", "VPN", "Windows"],
+      details: [
+        "Working with domain join, permissions, authentication, and troubleshooting workflows",
+        "Exploring Kerberos, NTLM, AD groups, and access control behaviour",
+        "Using the lab to build practical IT support and junior SOC skills",
+      ],
     },
     {
       title: "Cloud Portfolio Website",
@@ -24,6 +52,11 @@ export default function Home() {
       summary:
         "Personal portfolio built with Next.js and deployed on Vercel to showcase labs, projects, and downloadable resume and cover letter.",
       highlights: ["Next.js", "Vercel", "Frontend"],
+      details: [
+        "Designed to present hands-on labs and case studies clearly",
+        "Continuously updated with projects, documents, and security learning progress",
+        "Used as a professional portfolio for applications and networking",
+      ],
     },
   ];
 
@@ -126,7 +159,9 @@ export default function Home() {
         <section id="projects" className="card" aria-label="Projects">
           <div className="sectionHeader">
             <h2 className="sectionTitle">Projects & Labs</h2>
-            <p className="muted">Focused on practical, real-world scenarios.</p>
+            <p className="muted">
+              Focused on practical, real-world scenarios and hands-on investigation.
+            </p>
           </div>
 
           <div className="projects">
@@ -146,6 +181,12 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+
+                <ul className="list" style={{ marginTop: 14 }}>
+                  {project.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
