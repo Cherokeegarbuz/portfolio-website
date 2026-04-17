@@ -4,7 +4,7 @@ export default function Home() {
       title: "SOC Lab: Multi-Stage PowerShell Attack Detection & Response",
       status: "Featured",
       summary:
-        "Built a hands-on Windows SOC lab to simulate and investigate a multi-stage attack involving encoded PowerShell, suspicious process chains, reconnaissance activity, and registry-based persistence.",
+        "Built and investigated a hands-on Windows SOC lab simulating a multi-stage compromise involving encoded PowerShell execution, suspicious process chains, reconnaissance activity, and registry-based persistence.",
       highlights: [
         "Event ID 4688",
         "PowerShell Logging",
@@ -13,49 +13,50 @@ export default function Home() {
       ],
       details: [
         "Detected obfuscated PowerShell execution using -enc, -nop, -w hidden, and execution policy bypass flags",
-        "Investigated parent-child process chains including PowerShell spawning cmd.exe and reg.exe",
-        "Analysed reconnaissance behaviour such as whoami, ipconfig, and net user",
-        "Identified persistence via HKCU Run key modification and documented containment actions",
+        "Investigated parent-child process chains including PowerShell spawning cmd.exe, ipconfig.exe, and reg.exe",
+        "Analysed post-exploitation reconnaissance behaviour such as whoami, hostname, ipconfig, and net user",
+        "Identified persistence via HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run and documented response actions",
+        "Reconstructed attack timeline and assessed severity based on execution, reconnaissance, and persistence",
       ],
     },
     {
       title: "SOC Analyst Training Lab",
       status: "Active",
       summary:
-        "Simulated realistic security incidents involving credential theft, Pass-the-Hash, phishing, DNS tunneling, and persistence. Focused on investigation flow, containment decisions, and structured incident reporting.",
+        "Simulated realistic security incidents involving credential theft, Pass-the-Hash, phishing, DNS tunneling, and persistence. Focused on detection logic, investigation flow, containment decisions, and structured incident reporting.",
       highlights: [
         "Threat Hunting",
         "Incident Response",
         "SIEM Mindset",
       ],
       details: [
-        "Practised multi-stage detection and triage thinking",
-        "Focused on scoping, escalation, and host containment decisions",
-        "Mapped suspicious behaviour to attacker objectives and likely next steps",
+        "Practised multi-stage detection and triage thinking across endpoint and authentication activity",
+        "Focused on scoping, escalation, and containment decisions rather than relying on a single alert",
+        "Mapped suspicious behaviour to attacker objectives including execution, discovery, credential abuse, and persistence",
       ],
     },
     {
       title: "Active Directory & Network Lab",
       status: "In Progress",
       summary:
-        "Building a Windows lab environment to practise Active Directory fundamentals, authentication flows, DNS, VPN troubleshooting, and structured support workflows.",
+        "Building a Windows domain lab to practise Active Directory fundamentals, authentication flows, DNS troubleshooting, permissions, and structured IT support workflows.",
       highlights: ["Active Directory", "DNS", "VPN", "Windows"],
       details: [
-        "Working with domain join, permissions, authentication, and troubleshooting workflows",
-        "Exploring Kerberos, NTLM, AD groups, and access control behaviour",
-        "Using the lab to build practical IT support and junior SOC skills",
+        "Working with domain join, users, groups, permissions, and authentication troubleshooting",
+        "Exploring Kerberos, NTLM, Group Policy, token refresh, and access control behaviour",
+        "Using the lab to strengthen both junior SOC analysis and real-world IT support troubleshooting",
       ],
     },
     {
       title: "Cloud Portfolio Website",
       status: "Live",
       summary:
-        "Personal portfolio built with Next.js and deployed on Vercel to showcase labs, projects, and downloadable resume and cover letter.",
+        "Personal portfolio built with Next.js and deployed on Vercel to showcase hands-on labs, projects, case studies, and downloadable resume and cover letter.",
       highlights: ["Next.js", "Vercel", "Frontend"],
       details: [
-        "Designed to present hands-on labs and case studies clearly",
-        "Continuously updated with projects, documents, and security learning progress",
-        "Used as a professional portfolio for applications and networking",
+        "Designed to present practical cybersecurity work clearly and professionally",
+        "Continuously updated with new labs, projects, and portfolio-ready documentation",
+        "Used as a central application portfolio for recruiters, hiring managers, and networking",
       ],
     },
   ];
@@ -160,7 +161,7 @@ export default function Home() {
           <div className="sectionHeader">
             <h2 className="sectionTitle">Projects & Labs</h2>
             <p className="muted">
-              Focused on practical, real-world scenarios and hands-on investigation.
+              Focused on practical, hands-on scenarios and investigation-driven learning.
             </p>
           </div>
 
