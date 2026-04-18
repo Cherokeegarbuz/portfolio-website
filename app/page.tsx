@@ -18,12 +18,13 @@ export default function Page() {
         <h1 className="title">
           Aspiring SOC Analyst building practical cybersecurity skills
         </h1>
-
+        
         <p className="subtitle">
-          Hands-on home lab work focused on threat detection, Active Directory,
-          Windows security logs, incident response thinking, and analyst-style
-          investigation.
+          Hands-on SOC lab experience detecting PowerShell abuse, analysing Windows logs,
+          and responding to simulated security incidents using Active Directory and KQL.
         </p>
+        
+        
 
         <div className="ctaRow">
           <a href="#projects" className="btn primary">
