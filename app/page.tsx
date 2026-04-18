@@ -1,277 +1,290 @@
+import Link from "next/link";
+
+const projects = [
+  {
+    title: "SOC Detection Engineering Lab",
+    description:
+      "Built and tested detection ideas using KQL-style logic and hands-on SOC workflows. Practised identifying encoded PowerShell, suspicious parent-child process chains, privilege escalation activity, and incident response decision-making.",
+    skills: [
+      "KQL",
+      "Threat Detection",
+      "SOC Analysis",
+      "Incident Response",
+      "PowerShell",
+      "Windows Event Logs",
+    ],
+    link: "/SOC_KQL_Portfolio.pdf",
+    linkLabel: "View SOC Playbook",
+  },
+  {
+    title: "Active Directory Home Lab",
+    description:
+      "Built a Windows Server and client lab to practise domain administration, user and group management, permissions troubleshooting, log analysis, and security investigation workflows in a realistic environment.",
+    skills: [
+      "Active Directory",
+      "Windows Server",
+      "UTM",
+      "Group Policy",
+      "Event Viewer",
+      "Access Control",
+    ],
+  },
+  {
+    title: "Cybersecurity Portfolio Website",
+    description:
+      "Designed and updated a personal portfolio website to showcase practical labs, projects, and technical development while learning GitHub, deployment workflows, and modern web presentation.",
+    skills: ["Next.js", "TypeScript", "GitHub", "Vercel", "Web Development"],
+  },
+];
+
+const focusAreas = [
+  "SOC Analysis",
+  "Threat Detection",
+  "Incident Response",
+  "Active Directory",
+  "KQL",
+  "Windows Security",
+  "PowerShell",
+  "SIEM Fundamentals",
+];
+
 export default function Home() {
-  const projects = [
-    {
-      title: "SOC Lab: Multi-Stage PowerShell Attack Detection & Response",
-      status: "Featured",
-      summary:
-        "Built and investigated a hands-on Windows SOC lab simulating a multi-stage compromise involving encoded PowerShell execution, suspicious process chains, reconnaissance activity, and registry-based persistence.",
-      highlights: [
-        "Event ID 4688",
-        "PowerShell Logging",
-        "Incident Response",
-        "MITRE ATT&CK",
-      ],
-      details: [
-        "Detected obfuscated PowerShell execution using -enc, -nop, -w hidden, and execution policy bypass flags",
-        "Investigated parent-child process chains including PowerShell spawning cmd.exe, ipconfig.exe, and reg.exe",
-        "Analysed post-exploitation reconnaissance behaviour such as whoami, hostname, ipconfig, and net user",
-        "Identified persistence via HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run and documented response actions",
-        "Reconstructed attack timeline and assessed severity based on execution, reconnaissance, and persistence",
-      ],
-    },
-    {
-      title: "SOC Analyst Training Lab",
-      status: "Active",
-      summary:
-        "Simulated realistic security incidents involving credential theft, Pass-the-Hash, phishing, DNS tunneling, and persistence. Focused on detection logic, investigation flow, containment decisions, and structured incident reporting.",
-      highlights: [
-        "Threat Hunting",
-        "Incident Response",
-        "SIEM Mindset",
-      ],
-      details: [
-        "Practised multi-stage detection and triage thinking across endpoint and authentication activity",
-        "Focused on scoping, escalation, and containment decisions rather than relying on a single alert",
-        "Mapped suspicious behaviour to attacker objectives including execution, discovery, credential abuse, and persistence",
-      ],
-    },
-    {
-      title: "Active Directory & Network Lab",
-      status: "In Progress",
-      summary:
-        "Building a Windows domain lab to practise Active Directory fundamentals, authentication flows, DNS troubleshooting, permissions, and structured IT support workflows.",
-      highlights: ["Active Directory", "DNS", "VPN", "Windows"],
-      details: [
-        "Working with domain join, users, groups, permissions, and authentication troubleshooting",
-        "Exploring Kerberos, NTLM, Group Policy, token refresh, and access control behaviour",
-        "Using the lab to strengthen both junior SOC analysis and real-world IT support troubleshooting",
-      ],
-    },
-    {
-      title: "Cloud Portfolio Website",
-      status: "Live",
-      summary:
-        "Personal portfolio built with Next.js and deployed on Vercel to showcase hands-on labs, projects, case studies, and downloadable resume and cover letter.",
-      highlights: ["Next.js", "Vercel", "Frontend"],
-      details: [
-        "Designed to present practical cybersecurity work clearly and professionally",
-        "Continuously updated with new labs, projects, and portfolio-ready documentation",
-        "Used as a central application portfolio for recruiters, hiring managers, and networking",
-      ],
-    },
-  ];
-
-  const skills = [
-    "Windows & Active Directory fundamentals",
-    "Authentication (NTLM, Kerberos basics)",
-    "Networking (DNS, DHCP, VLANs, VPN)",
-    "Incident triage & escalation thinking",
-    "Log analysis mindset (SIEM concepts)",
-    "Linux & CLI basics",
-    "Clear documentation & ticket workflows",
-  ];
-
-  const caseStudies = [
-    {
-      title: "Credential Theft & Lateral Movement",
-      summary:
-        "Investigated suspicious NTLM authentication, correlated PowerShell activity, identified LSASS access, and scoped likely credential theft behaviour.",
-      bullets: [
-        "Correlated weak signals instead of waiting for a single alert",
-        "Investigated authentication anomalies and endpoint behaviour",
-        "Practised containment, scoping, and escalation decisions",
-      ],
-    },
-    {
-      title: "DNS Tunneling & Data Exfiltration",
-      summary:
-        "Analysed unusual DNS query patterns, identified encoded subdomains, linked activity to PowerShell launched from Word, and worked through exfiltration containment.",
-      bullets: [
-        "Detected subtle DNS anomalies and NXDOMAIN spikes",
-        "Traced behaviour back to likely phishing execution chain",
-        "Focused on containment, persistence checks, and historical hunting",
-      ],
-    },
-  ];
-
   return (
-    <div className="page">
-      <header className="header">
-        <div className="container">
-          <p className="kicker">SOC ANALYST • IT SUPPORT • CYBERSECURITY</p>
-          <h1 className="title">Sergey Garbuz</h1>
-          <p className="subtitle">
-            Junior SOC Analyst / IT Support — Sydney, AU. Building hands-on labs
-            and practising real-world security scenarios.
-          </p>
+    <main className="min-h-screen bg-neutral-950 text-white">
+      <section className="border-b border-white/10">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 md:px-10 md:py-24 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-cyan-400">
+              Sergii Garbuz
+            </p>
 
-          <div className="ctaRow">
-            <a className="btn primary" href="#contact">
-              Contact
-            </a>
-            <a className="btn" href="#projects">
-              View Projects
-            </a>
+            <h1 className="text-4xl font-bold leading-tight md:text-6xl">
+              Aspiring SOC Analyst building practical cybersecurity skills
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base leading-8 text-neutral-300 md:text-lg">
+              I am developing hands-on experience through home lab work focused
+              on threat detection, Active Directory, Windows security logs,
+              incident response thinking, and real analyst-style investigation.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="#projects"
+                className="rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-cyan-300"
+              >
+                View Projects
+              </Link>
+
+              <Link
+                href="/resume.pdf"
+                target="_blank"
+                className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
+              >
+                Resume
+              </Link>
+
+              <Link
+                href="/cover-letter.pdf"
+                target="_blank"
+                className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
+              >
+                Cover Letter
+              </Link>
+            </div>
           </div>
-        </div>
-      </header>
 
-      <main className="container main">
-        <section className="card" aria-label="About">
-          <h2 className="sectionTitle">About</h2>
-          <p className="text">
-            I’m working towards a Junior SOC Analyst / IT Support role, focusing
-            on practical labs and real-world troubleshooting.
-          </p>
-          <p className="text" style={{ marginTop: 12 }}>
-            I simulate security incidents such as credential theft, lateral
-            movement, phishing, and data exfiltration, analyse behaviour rather
-            than relying only on alerts, and document findings in a structured,
-            repeatable way.
-          </p>
-        </section>
+          <div className="w-full max-w-xl rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <h2 className="text-xl font-semibold text-white">Core Focus Areas</h2>
 
-        <section className="grid">
-          <section className="card" aria-label="Skills">
-            <h2 className="sectionTitle">Core Skills</h2>
-            <ul className="list">
-              {skills.map((skill) => (
-                <li key={skill}>{skill}</li>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {focusAreas.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200"
+                >
+                  {item}
+                </span>
               ))}
-            </ul>
-          </section>
+            </div>
 
-          <section className="card" aria-label="Current Focus">
-            <h2 className="sectionTitle">Current Focus</h2>
-            <ul className="list">
-              <li>
-                Simulating SOC scenarios (Pass-the-Hash, credential dumping, DNS
-                tunneling, phishing)
-              </li>
-              <li>Building AD + Windows lab environment</li>
-              <li>
-                Writing structured incident reports (detection → investigation →
-                containment)
-              </li>
-            </ul>
-          </section>
-        </section>
-
-        <section id="projects" className="card" aria-label="Projects">
-          <div className="sectionHeader">
-            <h2 className="sectionTitle">Projects & Labs</h2>
-            <p className="muted">
-              Focused on practical, hands-on scenarios and investigation-driven learning.
+            <p className="mt-6 text-sm leading-7 text-neutral-400">
+              This portfolio highlights practical work in security operations,
+              home lab development, detection thinking, and technical growth
+              toward a junior SOC analyst role.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="projects">
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+          <div className="max-w-4xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-400">
+              About Me
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Practical learning, home labs, and real investigation mindset
+            </h2>
+
+            <p className="mt-6 text-base leading-8 text-neutral-300">
+              I am focused on building job-ready cybersecurity skills through
+              structured hands-on practice. My current work includes Active
+              Directory lab exercises, Windows event log investigation,
+              PowerShell-related detection scenarios, and SOC-style analyst
+              reasoning around phishing, privilege escalation, and incident
+              response.
+            </p>
+
+            <p className="mt-4 text-base leading-8 text-neutral-300">
+              I enjoy learning by doing, especially when I can simulate real
+              attack chains, investigate suspicious activity, and turn that
+              process into practical documentation and portfolio projects.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+          <p className="text-sm uppercase tracking-[0.3em] text-cyan-400">
+            Projects
+          </p>
+
+          <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+            Cybersecurity Projects and Lab Work
+          </h2>
+
+          <p className="mt-5 max-w-3xl text-base leading-8 text-neutral-300">
+            These projects show the practical side of my learning, including lab
+            building, detection thinking, analyst workflows, and technical
+            problem solving.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project) => (
-              <article key={project.title} className="projectCard">
-                <div className="projectTop">
-                  <h3 className="projectTitle">{project.title}</h3>
-                  <span className="badge">{project.status}</span>
-                </div>
+              <article
+                key={project.title}
+                className="flex h-full flex-col rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg backdrop-blur-sm transition hover:border-cyan-400/40 hover:bg-white/10"
+              >
+                <h3 className="text-2xl font-semibold">{project.title}</h3>
 
-                <p className="text">{project.summary}</p>
+                <p className="mt-4 flex-grow text-sm leading-7 text-neutral-300">
+                  {project.description}
+                </p>
 
-                <div className="chips">
-                  {project.highlights.map((highlight) => (
-                    <span className="chip" key={highlight}>
-                      {highlight}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-white/10 bg-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-200"
+                    >
+                      {skill}
                     </span>
                   ))}
                 </div>
 
-                <ul className="list" style={{ marginTop: 14 }}>
-                  {project.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
+                {project.link && (
+                  <div className="mt-6">
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      className="inline-flex rounded-2xl bg-cyan-400 px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-cyan-300"
+                    >
+                      {project.linkLabel}
+                    </Link>
+                  </div>
+                )}
               </article>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="card" aria-label="Case Studies">
-          <div className="sectionHeader">
-            <h2 className="sectionTitle">Case Studies</h2>
-            <p className="muted">Examples of the scenarios I’ve worked through.</p>
-          </div>
+      <section className="border-b border-white/10">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+          <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-400/10 to-transparent p-8">
+            <p className="text-sm uppercase tracking-[0.3em] text-cyan-400">
+              Documents
+            </p>
 
-          <div className="projects">
-            {caseStudies.map((study) => (
-              <article key={study.title} className="projectCard">
-                <div className="projectTop">
-                  <h3 className="projectTitle">{study.title}</h3>
-                  <span className="badge">Scenario</span>
-                </div>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+              Portfolio Documents
+            </h2>
 
-                <p className="text">{study.summary}</p>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-neutral-300">
+              These documents support my applications and show both professional
+              presentation and practical cybersecurity work.
+            </p>
 
-                <ul className="list" style={{ marginTop: 12 }}>
-                  {study.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="card" aria-label="Contact">
-          <h2 className="sectionTitle">Contact</h2>
-
-          <div className="contactGrid">
-            <div>
-              <p className="mutedLabel">Email</p>
-              <a className="link" href="mailto:cherokeegarbuz@gmail.com">
-                cherokeegarbuz@gmail.com
-              </a>
-
-              <p className="mutedLabel" style={{ marginTop: 14 }}>
-                LinkedIn
-              </p>
-              <a
-                className="link"
-                href="https://au.linkedin.com/in/sergii-garbuz"
-                target="_blank"
-                rel="noreferrer"
-              >
-                au.linkedin.com/in/sergii-garbuz
-              </a>
-            </div>
-
-            <div className="downloadRow">
-              <a
-                className="btn"
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
                 href="/resume.pdf"
                 target="_blank"
-                rel="noreferrer"
+                className="rounded-2xl bg-cyan-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-cyan-300"
               >
-                Resume (PDF)
-              </a>
-              <a
-                className="btn"
+                View Resume
+              </Link>
+
+              <Link
                 href="/cover-letter.pdf"
                 target="_blank"
-                rel="noreferrer"
+                className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
               >
-                Cover Letter (PDF)
-              </a>
+                View Cover Letter
+              </Link>
+
+              <Link
+                href="/SOC_KQL_Portfolio.pdf"
+                target="_blank"
+                className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
+              >
+                View SOC Playbook
+              </Link>
             </div>
           </div>
-        </section>
-      </main>
-
-      <footer className="footer">
-        <div className="container footerInner">
-          <span className="muted">Built with Next.js • Deployed on Vercel</span>
-          <span className="muted">
-            © {new Date().getFullYear()} Sergey Garbuz
-          </span>
         </div>
-      </footer>
-    </div>
+      </section>
+
+      <section>
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-cyan-400">
+                Contact
+              </p>
+
+              <h2 className="mt-3 text-3xl font-bold md:text-4xl">
+                Let’s connect
+              </h2>
+
+              <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-300">
+                I am actively building toward an entry-level SOC analyst or IT
+                support opportunity and enjoy practical environments where I can
+                keep learning, contribute, and grow.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="https://www.linkedin.com/in/sergii-garbuz/"
+                target="_blank"
+                className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:opacity-90"
+              >
+                LinkedIn
+              </Link>
+
+              <Link
+                href="mailto:your@email.com"
+                className="rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-300"
+              >
+                Email Me
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
