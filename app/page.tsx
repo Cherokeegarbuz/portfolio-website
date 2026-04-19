@@ -25,16 +25,10 @@ export default function Page() {
         </p>
 
         <div className="ctaRow">
-          <a href="#projects" className="btn primary">
-            View Projects
-          </a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn">
-            Resume
-          </a>
-          <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" className="btn">
-            Cover Letter
-          </a>
-          <a href="/SOC_KQL_Portfolio.pdf" target="_blank" rel="noreferrer" className="btn">
+          <a href="#projects" className="btn primary">View Projects</a>
+          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn">Resume</a>
+          <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" className="btn">Cover Letter</a>
+          <a href="/SOC_KQL_Playbook_v2.pdf" target="_blank" rel="noreferrer" className="btn">
             SOC Playbook
           </a>
         </div>
@@ -48,9 +42,7 @@ export default function Page() {
 
             <div className="chips">
               {focusAreas.map((item) => (
-                <span key={item} className="chip">
-                  {item}
-                </span>
+                <span key={item} className="chip">{item}</span>
               ))}
             </div>
 
@@ -65,10 +57,9 @@ export default function Page() {
             <p className="mutedLabel">Current Goal</p>
             <h2 className="sectionTitle">Junior SOC Analyst / IT Support</h2>
             <p className="text">
-              My goal is to transition into an entry-level SOC analyst or IT
-              support role where I can keep learning, contribute to real
-              environments, and continue developing strong investigation,
-              troubleshooting, and incident response skills.
+              My goal is to transition into an entry-level SOC analyst or IT support role
+              where I can keep learning, contribute to real environments, and continue
+              developing strong investigation and response skills.
             </p>
 
             <div className="ctaRow">
@@ -84,6 +75,7 @@ export default function Page() {
           </div>
         </section>
 
+        {/* FEATURED */}
         <section id="projects" className="card">
           <p className="mutedLabel">Featured Project</p>
 
@@ -93,37 +85,21 @@ export default function Page() {
           </div>
 
           <p className="text">
-            Designed and tested SOC-style detections using KQL and real Windows
-            log analysis. Simulated attacker behaviour including encoded
-            PowerShell execution, suspicious parent-child process chains, and
-            privilege escalation scenarios.
-          </p>
-
-          <p className="text" style={{ marginTop: 14 }}>
-            Investigated activity using Event Viewer and applied incident
-            response thinking such as account restriction, session revocation,
-            and environment-wide threat hunting.
+            Designed and tested SOC-style detections using KQL and real Windows log analysis.
+            Simulated attacker behaviour including encoded PowerShell execution, suspicious
+            parent-child process chains, and privilege escalation scenarios.
           </p>
 
           <ul className="list">
             <li>Detected encoded PowerShell through command-line analysis</li>
-            <li>Reviewed Event ID 4688 for suspicious process execution</li>
-            <li>Investigated abnormal parent-child process relationships</li>
-            <li>Practised KQL-style filtering and detection logic</li>
-            <li>Built analyst-style response decision-making workflows</li>
+            <li>Analysed Event ID 4688 for suspicious process execution</li>
+            <li>Investigated abnormal parent-child relationships</li>
+            <li>Practised KQL detection logic</li>
           </ul>
-
-          <div className="chips">
-            <span className="chip">KQL</span>
-            <span className="chip">Threat Detection</span>
-            <span className="chip">Incident Response</span>
-            <span className="chip">Windows Logs</span>
-            <span className="chip">PowerShell</span>
-          </div>
 
           <div className="ctaRow">
             <a
-              href="/SOC_KQL_Portfolio.pdf"
+              href="/SOC_KQL_Playbook_v2.pdf"
               target="_blank"
               rel="noreferrer"
               className="btn primary"
@@ -133,11 +109,14 @@ export default function Page() {
           </div>
         </section>
 
+        {/* PROJECTS */}
         <section className="card">
           <p className="mutedLabel">Projects</p>
           <h2 className="sectionTitle">More Lab Work</h2>
 
           <div className="projects">
+
+            {/* AD LAB */}
             <div className="projectCard">
               <div className="projectTop">
                 <h3 className="projectTitle">Active Directory Home Lab</h3>
@@ -145,25 +124,18 @@ export default function Page() {
               </div>
 
               <p className="text">
-                Built a Windows Server + client lab environment to simulate real
-                enterprise scenarios. Practised user and group management,
-                permissions troubleshooting, and Windows administration tasks.
-              </p>
-
-              <p className="text" style={{ marginTop: 14 }}>
-                Investigated security events, validated group membership
-                behaviour, and explored authentication concepts including logon
-                events, access issues, and token-related troubleshooting.
+                Built a Windows Server + client lab to simulate enterprise environments.
+                Practised user management, permissions troubleshooting, and log analysis.
               </p>
 
               <div className="chips">
                 <span className="chip">Active Directory</span>
                 <span className="chip">Windows Server</span>
                 <span className="chip">Event Viewer</span>
-                <span className="chip">GPO</span>
               </div>
             </div>
 
+            {/* INCIDENT LAB */}
             <div className="projectCard">
               <div className="projectTop">
                 <h3 className="projectTitle">Incident Response Scenario Lab</h3>
@@ -171,52 +143,51 @@ export default function Page() {
               </div>
 
               <p className="text">
-                Simulated SOC scenarios involving suspicious sign-ins, possible
-                credential compromise, OAuth abuse, and persistence-related
-                activity.
-              </p>
-
-              <p className="text" style={{ marginTop: 14 }}>
-                Analysed attack indicators, reviewed response priorities, and
-                practised actions such as revoking sessions, restricting
-                accounts, and checking the wider environment for similar
-                behaviour.
+                Simulated real SOC scenarios including credential compromise,
+                OAuth abuse, and suspicious login activity.
               </p>
 
               <div className="chips">
                 <span className="chip">Incident Response</span>
                 <span className="chip">Threat Hunting</span>
-                <span className="chip">Log Analysis</span>
-                <span className="chip">Security Operations</span>
               </div>
             </div>
 
+            {/* PLAYBOOK */}
             <div className="projectCard">
               <div className="projectTop">
-                <h3 className="projectTitle">Ransomware Pre-Stage Incident Report</h3>
+                <h3 className="projectTitle">SOC KQL Playbook</h3>
+                <span className="badge">KQL</span>
+              </div>
+
+              <p className="text">
+                Developed a KQL detection playbook covering full attack chains
+                including PowerShell abuse, lateral movement, and ransomware pre-stage activity.
+              </p>
+
+              <div className="ctaRow">
+                <a
+                  href="/SOC_KQL_Playbook_v2.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn"
+                >
+                  Open Playbook
+                </a>
+              </div>
+            </div>
+
+            {/* INCIDENT REPORT */}
+            <div className="projectCard">
+              <div className="projectTop">
+                <h3 className="projectTitle">Ransomware Incident Report</h3>
                 <span className="badge">IR</span>
               </div>
 
               <p className="text">
-                Documented a full multi-stage intrusion involving phishing-based
-                initial access, LOLbin abuse, hidden PowerShell execution,
-                command-and-control beaconing, privilege escalation, lateral movement,
-                and ransomware pre-encryption activity.
+                Documented a full multi-stage ransomware pre-stage attack including
+                detection, containment, lateral movement, and prevention strategies.
               </p>
-
-              <p className="text" style={{ marginTop: 14 }}>
-                The incident report covers end-to-end analyst workflow:
-                triage, containment, scope investigation, eradication,
-                recovery, and lessons learned. The attack was contained before
-                encryption occurred.
-              </p>
-
-              <div className="chips">
-                <span className="chip">Ransomware</span>
-                <span className="chip">Incident Response</span>
-                <span className="chip">Lateral Movement</span>
-                <span className="chip">Privilege Escalation</span>
-              </div>
 
               <div className="ctaRow">
                 <a
@@ -225,55 +196,24 @@ export default function Page() {
                   rel="noreferrer"
                   className="btn"
                 >
-                  View Incident Report
+                  View Report
                 </a>
               </div>
             </div>
 
-            <div className="projectCard">
-              <div className="projectTop">
-                <h3 className="projectTitle">Cybersecurity Portfolio Website</h3>
-                <span className="badge">Web</span>
-              </div>
-
-              <p className="text">
-                Built and refined a portfolio website to present lab work,
-                technical growth, and cybersecurity-focused projects in a clear,
-                modern, and professional format.
-              </p>
-
-              <div className="chips">
-                <span className="chip">Next.js</span>
-                <span className="chip">GitHub</span>
-                <span className="chip">Vercel</span>
-                <span className="chip">Web Design</span>
-              </div>
-            </div>
           </div>
         </section>
 
+        {/* DOCUMENTS */}
         <section className="card">
           <p className="mutedLabel">Documents</p>
           <h2 className="sectionTitle">Quick Access</h2>
 
           <div className="downloadRow">
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn primary">
-              Resume
-            </a>
-            <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" className="btn">
-              Cover Letter
-            </a>
-            <a href="/SOC_KQL_Portfolio.pdf" target="_blank" rel="noreferrer" className="btn">
-              SOC Playbook
-            </a>
-            <a
-              href="/SOC_Incident_Report_Ransomware_PreStage.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="btn"
-            >
-              Incident Report
-            </a>
+            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn primary">Resume</a>
+            <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" className="btn">Cover Letter</a>
+            <a href="/SOC_KQL_Playbook_v2.pdf" target="_blank" rel="noreferrer" className="btn">SOC Playbook</a>
+            <a href="/SOC_Incident_Report_Ransomware_PreStage.pdf" target="_blank" rel="noreferrer" className="btn">Incident Report</a>
           </div>
         </section>
       </main>
