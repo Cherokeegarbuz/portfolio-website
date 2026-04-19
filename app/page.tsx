@@ -31,6 +31,14 @@ export default function Page() {
           <a href="/SOC_KQL_Playbook_v2.pdf" target="_blank" rel="noreferrer" className="btn">
             SOC Playbook
           </a>
+          <a
+            href="/Real_Incident_Investigation_Sergii_Garbuz.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn"
+          >
+            Incident Investigation
+          </a>
         </div>
       </header>
 
@@ -80,31 +88,32 @@ export default function Page() {
           <p className="mutedLabel">Featured Project</p>
 
           <div className="sectionHeader">
-            <h2 className="sectionTitle">SOC Detection Engineering Lab</h2>
+            <h2 className="sectionTitle">Real Incident Investigation</h2>
             <span className="badge">Featured</span>
           </div>
 
           <p className="text">
-            Designed and tested SOC-style detections using KQL and real Windows log analysis.
-            Simulated attacker behaviour including encoded PowerShell execution, suspicious
-            parent-child process chains, and privilege escalation scenarios.
+            Investigated a simulated multi-stage attack involving suspicious PowerShell
+            execution, likely token theft, lateral movement, and data exfiltration risk.
+            Documented the timeline, validated evidence, and outlined containment and
+            escalation decisions using a SOC-style workflow.
           </p>
 
           <ul className="list">
-            <li>Detected encoded PowerShell through command-line analysis</li>
-            <li>Analysed Event ID 4688 for suspicious process execution</li>
-            <li>Investigated abnormal parent-child relationships</li>
-            <li>Practised KQL detection logic</li>
+            <li>Built a clear attack timeline from initial execution to exfiltration risk</li>
+            <li>Reviewed encoded PowerShell, parent-child process chains, and Windows evidence</li>
+            <li>Applied incident response thinking across containment, escalation, and documentation</li>
+            <li>Presented the investigation as a polished portfolio-ready report</li>
           </ul>
 
           <div className="ctaRow">
             <a
-              href="/SOC_KQL_Playbook_v2.pdf"
+              href="/Real_Incident_Investigation_Sergii_Garbuz.pdf"
               target="_blank"
               rel="noreferrer"
               className="btn primary"
             >
-              View SOC Playbook
+              View Incident Report
             </a>
           </div>
         </section>
@@ -116,6 +125,31 @@ export default function Page() {
 
           <div className="projects">
 
+            {/* DETECTION LAB */}
+            <div className="projectCard">
+              <div className="projectTop">
+                <h3 className="projectTitle">SOC Detection Engineering Lab</h3>
+                <span className="badge">KQL</span>
+              </div>
+
+              <p className="text">
+                Designed and tested SOC-style detections using KQL and Windows log analysis.
+                Focused on encoded PowerShell, suspicious process relationships, and early
+                attacker behaviour that can be surfaced through good detection logic.
+              </p>
+
+              <div className="ctaRow">
+                <a
+                  href="/SOC_KQL_Playbook_v2.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn"
+                >
+                  Open Playbook
+                </a>
+              </div>
+            </div>
+
             {/* AD LAB */}
             <div className="projectCard">
               <div className="projectTop">
@@ -124,8 +158,9 @@ export default function Page() {
               </div>
 
               <p className="text">
-                Built a Windows Server + client lab to simulate enterprise environments.
-                Practised user management, permissions troubleshooting, and log analysis.
+                Built a Windows Server and client lab to simulate enterprise administration.
+                Practised user and group management, permissions troubleshooting, log review,
+                and security-focused workflow across a small domain environment.
               </p>
 
               <div className="chips">
@@ -143,8 +178,9 @@ export default function Page() {
               </div>
 
               <p className="text">
-                Simulated real SOC scenarios including credential compromise,
-                OAuth abuse, and suspicious login activity.
+                Simulated realistic SOC cases including credential compromise, suspicious
+                logins, OAuth abuse, and attacker persistence. Focused on triage decisions,
+                escalation judgement, and environment-wide validation.
               </p>
 
               <div className="chips">
@@ -153,40 +189,17 @@ export default function Page() {
               </div>
             </div>
 
-            {/* PLAYBOOK */}
+            {/* RANSOMWARE REPORT */}
             <div className="projectCard">
               <div className="projectTop">
-                <h3 className="projectTitle">SOC KQL Playbook</h3>
-                <span className="badge">KQL</span>
-              </div>
-
-              <p className="text">
-                Developed a KQL detection playbook covering full attack chains
-                including PowerShell abuse, lateral movement, and ransomware pre-stage activity.
-              </p>
-
-              <div className="ctaRow">
-                <a
-                  href="/SOC_KQL_Playbook_v2.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn"
-                >
-                  Open Playbook
-                </a>
-              </div>
-            </div>
-
-            {/* INCIDENT REPORT */}
-            <div className="projectCard">
-              <div className="projectTop">
-                <h3 className="projectTitle">Ransomware Incident Report</h3>
+                <h3 className="projectTitle">Ransomware Pre-Stage Report</h3>
                 <span className="badge">IR</span>
               </div>
 
               <p className="text">
-                Documented a full multi-stage ransomware pre-stage attack including
-                detection, containment, lateral movement, and prevention strategies.
+                Documented a full ransomware pre-stage attack chain including detection,
+                containment priorities, lateral movement considerations, and prevention
+                strategies relevant to junior SOC workflows.
               </p>
 
               <div className="ctaRow">
@@ -213,7 +226,12 @@ export default function Page() {
             <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn primary">Resume</a>
             <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" className="btn">Cover Letter</a>
             <a href="/SOC_KQL_Playbook_v2.pdf" target="_blank" rel="noreferrer" className="btn">SOC Playbook</a>
-            <a href="/SOC_Incident_Report_Ransomware_PreStage.pdf" target="_blank" rel="noreferrer" className="btn">Incident Report</a>
+            <a href="/Real_Incident_Investigation_Sergii_Garbuz.pdf" target="_blank" rel="noreferrer" className="btn">
+              Incident Investigation
+            </a>
+            <a href="/SOC_Incident_Report_Ransomware_PreStage.pdf" target="_blank" rel="noreferrer" className="btn">
+              Ransomware Report
+            </a>
           </div>
         </section>
       </main>
