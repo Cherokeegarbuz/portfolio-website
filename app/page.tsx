@@ -18,13 +18,11 @@ export default function Page() {
         <h1 className="title">
           Aspiring SOC Analyst building practical cybersecurity skills
         </h1>
-        
+
         <p className="subtitle">
           Hands-on SOC lab experience detecting PowerShell abuse, analysing Windows logs,
           and responding to simulated security incidents using Active Directory and KQL.
         </p>
-        
-        
 
         <div className="ctaRow">
           <a href="#projects" className="btn primary">
@@ -195,6 +193,45 @@ export default function Page() {
 
             <div className="projectCard">
               <div className="projectTop">
+                <h3 className="projectTitle">Ransomware Pre-Stage Incident Report</h3>
+                <span className="badge">IR</span>
+              </div>
+
+              <p className="text">
+                Documented a full multi-stage intrusion involving phishing-based
+                initial access, LOLbin abuse, hidden PowerShell execution,
+                command-and-control beaconing, privilege escalation, lateral movement,
+                and ransomware pre-encryption activity.
+              </p>
+
+              <p className="text" style={{ marginTop: 14 }}>
+                The incident report covers end-to-end analyst workflow:
+                triage, containment, scope investigation, eradication,
+                recovery, and lessons learned. The attack was contained before
+                encryption occurred.
+              </p>
+
+              <div className="chips">
+                <span className="chip">Ransomware</span>
+                <span className="chip">Incident Response</span>
+                <span className="chip">Lateral Movement</span>
+                <span className="chip">Privilege Escalation</span>
+              </div>
+
+              <div className="ctaRow">
+                <a
+                  href="/SOC_Incident_Report_Ransomware_PreStage.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn"
+                >
+                  View Incident Report
+                </a>
+              </div>
+            </div>
+
+            <div className="projectCard">
+              <div className="projectTop">
                 <h3 className="projectTitle">Cybersecurity Portfolio Website</h3>
                 <span className="badge">Web</span>
               </div>
@@ -228,6 +265,14 @@ export default function Page() {
             </a>
             <a href="/SOC_KQL_Portfolio.pdf" target="_blank" rel="noreferrer" className="btn">
               SOC Playbook
+            </a>
+            <a
+              href="/SOC_Incident_Report_Ransomware_PreStage.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
+              Incident Report
             </a>
           </div>
         </section>
