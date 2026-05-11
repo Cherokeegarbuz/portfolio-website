@@ -8,6 +8,8 @@ export default function Page() {
     "Windows Security",
     "PowerShell",
     "SIEM Fundamentals",
+    "Sysmon",
+    "Nmap",
   ];
 
   return (
@@ -21,7 +23,8 @@ export default function Page() {
 
         <p className="subtitle">
           Hands-on SOC lab experience detecting PowerShell abuse, analysing Windows logs,
-          and responding to simulated security incidents using Active Directory and KQL.
+          investigating Defender alerts, and practising modern endpoint telemetry using
+          Sysmon, Nmap, Kali, and Windows Security.
         </p>
 
         <div className="ctaRow">
@@ -55,9 +58,9 @@ export default function Page() {
             </div>
 
             <p className="text" style={{ marginTop: 16 }}>
-              I am building practical blue-team skills through detection-focused
-              lab work, log analysis, Windows administration, and structured SOC
-              scenarios designed to strengthen investigation and response thinking.
+              I am building practical blue-team skills through endpoint telemetry,
+              detection-focused lab work, Windows security logging, network reconnaissance,
+              and structured SOC scenarios designed to strengthen investigation and response thinking.
             </p>
           </div>
 
@@ -83,13 +86,46 @@ export default function Page() {
           </div>
         </section>
 
-        {/* FEATURED */}
         <section id="projects" className="card">
           <p className="mutedLabel">Featured Project</p>
 
           <div className="sectionHeader">
-            <h2 className="sectionTitle">Real Incident Investigation</h2>
+            <h2 className="sectionTitle">Modern SOC Endpoint Telemetry Lab</h2>
             <span className="badge">Featured</span>
+          </div>
+
+          <p className="text">
+            Built a modern SOC home lab using Kali Linux, Windows 11, Defender, Sysmon,
+            Nmap, Zenmap, and PowerShell to understand attacker-style behaviour from a
+            defensive analyst perspective. Practised internal reconnaissance, endpoint
+            telemetry collection, Defender detections, encoded PowerShell analysis, and
+            investigation workflows.
+          </p>
+
+          <ul className="list">
+            <li>Used Nmap and Zenmap to identify live hosts, filtered ports, exposed services, and firewall behaviour</li>
+            <li>Generated safe lab telemetry using encoded PowerShell and controlled file-delivery tests</li>
+            <li>Investigated Defender warnings, quarantine behaviour, SmartScreen reputation checks, and Windows Security events</li>
+            <li>Installed and troubleshot Sysmon to collect process creation, network connection, and file activity telemetry</li>
+            <li>Mapped technical findings to SOC questions: execution, containment, evidence, lateral movement risk, and detection logic</li>
+          </ul>
+
+          <div className="chips">
+            <span className="chip">Kali Linux</span>
+            <span className="chip">Windows 11</span>
+            <span className="chip">Sysmon</span>
+            <span className="chip">Defender</span>
+            <span className="chip">Nmap</span>
+            <span className="chip">PowerShell</span>
+          </div>
+        </section>
+
+        <section className="card">
+          <p className="mutedLabel">Featured Project</p>
+
+          <div className="sectionHeader">
+            <h2 className="sectionTitle">Real Incident Investigation</h2>
+            <span className="badge">IR</span>
           </div>
 
           <p className="text">
@@ -118,14 +154,11 @@ export default function Page() {
           </div>
         </section>
 
-        {/* PROJECTS */}
         <section className="card">
           <p className="mutedLabel">Projects</p>
           <h2 className="sectionTitle">More Lab Work</h2>
 
           <div className="projects">
-
-            {/* DETECTION LAB */}
             <div className="projectCard">
               <div className="projectTop">
                 <h3 className="projectTitle">SOC Detection Engineering Lab</h3>
@@ -150,7 +183,25 @@ export default function Page() {
               </div>
             </div>
 
-            {/* AD LAB */}
+            <div className="projectCard">
+              <div className="projectTop">
+                <h3 className="projectTitle">Nmap & Internal Recon Lab</h3>
+                <span className="badge">Recon</span>
+              </div>
+
+              <p className="text">
+                Practised internal network discovery and service enumeration using Nmap and Zenmap.
+                Compared open, closed, and filtered port states, tested firewall behaviour, and
+                connected scan results to real SOC triage questions around reconnaissance and lateral movement.
+              </p>
+
+              <div className="chips">
+                <span className="chip">Nmap</span>
+                <span className="chip">Zenmap</span>
+                <span className="chip">Firewall Analysis</span>
+              </div>
+            </div>
+
             <div className="projectCard">
               <div className="projectTop">
                 <h3 className="projectTitle">Active Directory Home Lab</h3>
@@ -170,7 +221,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* INCIDENT LAB */}
             <div className="projectCard">
               <div className="projectTop">
                 <h3 className="projectTitle">Incident Response Scenario Lab</h3>
@@ -189,7 +239,6 @@ export default function Page() {
               </div>
             </div>
 
-            {/* RANSOMWARE REPORT */}
             <div className="projectCard">
               <div className="projectTop">
                 <h3 className="projectTitle">Ransomware Pre-Stage Report</h3>
@@ -213,11 +262,9 @@ export default function Page() {
                 </a>
               </div>
             </div>
-
           </div>
         </section>
 
-        {/* DOCUMENTS */}
         <section className="card">
           <p className="mutedLabel">Documents</p>
           <h2 className="sectionTitle">Quick Access</h2>
