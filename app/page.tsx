@@ -1,13 +1,15 @@
 export default function Page() {
   const focusAreas = [
-    "SOC Analysis",
-    "Threat Detection",
-    "Incident Response",
+    "IT Support",
+    "Windows Troubleshooting",
+    "Helpdesk Fundamentals",
+    "Networking",
+    "Virtualisation",
     "Active Directory",
-    "KQL",
-    "Windows Security",
     "PowerShell",
-    "SIEM Fundamentals",
+    "SOC Analysis",
+    "Incident Response",
+    "KQL",
     "Sysmon",
     "Nmap",
   ];
@@ -18,13 +20,14 @@ export default function Page() {
         <p className="kicker">SERGII GARBUZ</p>
 
         <h1 className="title">
-          Aspiring SOC Analyst building practical cybersecurity skills
+          IT Support & Cybersecurity Home Lab Portfolio
         </h1>
 
         <p className="subtitle">
-          Hands-on SOC lab experience detecting PowerShell abuse, analysing Windows logs,
-          investigating Defender alerts, and practising modern endpoint telemetry using
-          Sysmon, Nmap, Kali, and Windows Security.
+          I am actively looking for IT Support, Helpdesk, Technical Support, or Junior SOC
+          opportunities. I am building hands-on experience through Windows troubleshooting,
+          virtual machines, networking, PowerShell, Active Directory concepts, Sysmon,
+          Nmap, Event Viewer, and security investigation labs.
         </p>
 
         <div className="ctaRow">
@@ -58,19 +61,19 @@ export default function Page() {
             </div>
 
             <p className="text" style={{ marginTop: 16 }}>
-              I am building practical blue-team skills through endpoint telemetry,
-              detection-focused lab work, Windows security logging, network reconnaissance,
-              and structured SOC scenarios designed to strengthen investigation and response thinking.
+              I am developing practical technical skills through IT support troubleshooting,
+              Windows administration, virtual lab building, endpoint monitoring, network
+              discovery, and structured SOC-style investigations.
             </p>
           </div>
 
           <div className="card">
             <p className="mutedLabel">Current Goal</p>
-            <h2 className="sectionTitle">Junior SOC Analyst / IT Support</h2>
+            <h2 className="sectionTitle">Seeking IT Support / Junior SOC Roles</h2>
             <p className="text">
-              My goal is to transition into an entry-level SOC analyst or IT support role
-              where I can keep learning, contribute to real environments, and continue
-              developing strong investigation and response skills.
+              My goal is to move into an entry-level IT Support, Helpdesk, Technical Support,
+              or Junior SOC Analyst role where I can contribute, keep learning, and grow in
+              real technical environments.
             </p>
 
             <div className="ctaRow">
@@ -90,22 +93,58 @@ export default function Page() {
           <p className="mutedLabel">Featured Project</p>
 
           <div className="sectionHeader">
+            <h2 className="sectionTitle">IT Support & Windows Troubleshooting Lab</h2>
+            <span className="badge">IT Support</span>
+          </div>
+
+          <p className="text">
+            Built and maintained a hands-on IT support lab using Windows virtual machines,
+            UTM on macOS, PowerShell, Event Viewer, Sysmon, networking tools, and troubleshooting
+            workflows. Practised solving real technical issues including VM boot problems,
+            ISO errors, DHCP/static IP confusion, Windows logging issues, service failures,
+            and basic system administration tasks.
+          </p>
+
+          <ul className="list">
+            <li>Troubleshot Windows VM installation, boot loops, missing ISO files, and virtual hardware settings</li>
+            <li>Practised DHCP, static IP configuration, connectivity testing, and basic network diagnostics</li>
+            <li>Used Event Viewer to investigate Windows logon events, process creation, and system activity</li>
+            <li>Installed, removed, and troubleshot Sysmon service issues from an administrator perspective</li>
+            <li>Practised PowerShell commands, service checks, Windows Security review, and log filtering</li>
+            <li>Built confidence with common IT support workflows: observe, test, isolate, fix, verify, document</li>
+          </ul>
+
+          <div className="chips">
+            <span className="chip">Windows 11</span>
+            <span className="chip">UTM</span>
+            <span className="chip">PowerShell</span>
+            <span className="chip">Event Viewer</span>
+            <span className="chip">DHCP</span>
+            <span className="chip">Sysmon</span>
+            <span className="chip">Troubleshooting</span>
+          </div>
+        </section>
+
+        <section className="card">
+          <p className="mutedLabel">Featured Project</p>
+
+          <div className="sectionHeader">
             <h2 className="sectionTitle">Modern SOC Endpoint Telemetry Lab</h2>
-            <span className="badge">Featured</span>
+            <span className="badge">Cybersecurity</span>
           </div>
 
           <p className="text">
             Built a modern SOC home lab using Kali Linux, Windows 11, Defender, Sysmon,
             Nmap, Zenmap, and PowerShell to understand attacker-style behaviour from a
-            defensive analyst perspective. Practised internal reconnaissance, endpoint
-            telemetry collection, Defender detections, encoded PowerShell analysis, and
-            investigation workflows.
+            defensive analyst perspective. Practised endpoint telemetry collection,
+            Defender detections, encoded PowerShell analysis, internal reconnaissance,
+            and investigation workflows.
           </p>
 
           <ul className="list">
             <li>Used Nmap and Zenmap to identify live hosts, filtered ports, exposed services, and firewall behaviour</li>
-            <li>Generated safe lab telemetry using encoded PowerShell and controlled file-delivery tests</li>
-            <li>Investigated Defender warnings, quarantine behaviour, SmartScreen reputation checks, and Windows Security events</li>
+            <li>Generated safe lab telemetry using encoded PowerShell and controlled security testing</li>
+            <li>Investigated Defender alerts, quarantine behaviour, SmartScreen reputation checks, and Windows Security events</li>
             <li>Installed and troubleshot Sysmon to collect process creation, network connection, and file activity telemetry</li>
             <li>Mapped technical findings to SOC questions: execution, containment, evidence, lateral movement risk, and detection logic</li>
           </ul>
@@ -161,6 +200,25 @@ export default function Page() {
           <div className="projects">
             <div className="projectCard">
               <div className="projectTop">
+                <h3 className="projectTitle">Helpdesk Troubleshooting Practice</h3>
+                <span className="badge">Support</span>
+              </div>
+
+              <p className="text">
+                Practised common helpdesk thinking across Windows issues, VM problems,
+                networking faults, permissions questions, service errors, and user-focused
+                troubleshooting. Focused on calm diagnosis, clear communication, and step-by-step resolution.
+              </p>
+
+              <div className="chips">
+                <span className="chip">Helpdesk</span>
+                <span className="chip">Windows</span>
+                <span className="chip">Troubleshooting</span>
+              </div>
+            </div>
+
+            <div className="projectCard">
+              <div className="projectTop">
                 <h3 className="projectTitle">SOC Detection Engineering Lab</h3>
                 <span className="badge">KQL</span>
               </div>
@@ -168,7 +226,7 @@ export default function Page() {
               <p className="text">
                 Designed and tested SOC-style detections using KQL and Windows log analysis.
                 Focused on encoded PowerShell, suspicious process relationships, and early
-                attacker behaviour that can be surfaced through good detection logic.
+                attacker behaviour that can be surfaced through strong detection logic.
               </p>
 
               <div className="ctaRow">
@@ -229,8 +287,8 @@ export default function Page() {
 
               <p className="text">
                 Simulated realistic SOC cases including credential compromise, suspicious
-                logins, OAuth abuse, and attacker persistence. Focused on triage decisions,
-                escalation judgement, and environment-wide validation.
+                logins, OAuth abuse, attacker persistence, and ransomware pre-stage activity.
+                Focused on triage decisions, escalation judgement, containment, and validation.
               </p>
 
               <div className="chips">
@@ -266,6 +324,21 @@ export default function Page() {
         </section>
 
         <section className="card">
+          <p className="mutedLabel">Skills Developed</p>
+          <h2 className="sectionTitle">Practical Technical Skills</h2>
+
+          <ul className="list">
+            <li>Windows troubleshooting, system checks, log review, and basic administration</li>
+            <li>Networking fundamentals including DHCP, static IPs, connectivity testing, and port scanning</li>
+            <li>Virtual machine setup and troubleshooting using UTM on macOS</li>
+            <li>PowerShell basics for investigation, system visibility, and support tasks</li>
+            <li>Event Viewer and Sysmon log analysis for both IT support and security investigation</li>
+            <li>Active Directory concepts including users, groups, permissions, and domain-style workflows</li>
+            <li>SOC investigation thinking including triage, containment, escalation, and documentation</li>
+          </ul>
+        </section>
+
+        <section className="card">
           <p className="mutedLabel">Documents</p>
           <h2 className="sectionTitle">Quick Access</h2>
 
@@ -273,10 +346,20 @@ export default function Page() {
             <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn primary">Resume</a>
             <a href="/cover-letter.pdf" target="_blank" rel="noreferrer" className="btn">Cover Letter</a>
             <a href="/SOC_KQL_Playbook_v2.pdf" target="_blank" rel="noreferrer" className="btn">SOC Playbook</a>
-            <a href="/Real_Incident_Investigation_Sergii_Garbuz.pdf" target="_blank" rel="noreferrer" className="btn">
+            <a
+              href="/Real_Incident_Investigation_Sergii_Garbuz.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
               Incident Investigation
             </a>
-            <a href="/SOC_Incident_Report_Ransomware_PreStage.pdf" target="_blank" rel="noreferrer" className="btn">
+            <a
+              href="/SOC_Incident_Report_Ransomware_PreStage.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="btn"
+            >
               Ransomware Report
             </a>
           </div>
